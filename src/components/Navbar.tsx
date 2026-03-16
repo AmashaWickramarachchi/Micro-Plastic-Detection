@@ -1,0 +1,78 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Microscope } from "lucide-react";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/background", label: "Research Background" },
+  { to: "/objectives", label: "Objectives" },
+  { to: "/methodology", label: "Methodology" },
+  { to: "/results", label: "Results" },
+  { to: "/impact", label: "Impact" },
+  { to: "/documentation", label: "Documentation" },
+  { to: "/team", label: "Team" },
+  { to: "/contact", label: "Contact" },
+];
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  return (
+    <nav className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-lg">
+      <div className="container flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 font-display font-bold text-primary">
+          <Microscope className="h-6 w-6" />
+          <span className="hidden sm:inline">MP Detection</span>
+        </Link>
+
+        {/* Desktop */}
+        <div className="hidden lg:flex items-center gap-1">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                location.pathname === l.to
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="lg:hidden p-2 rounded-md hover:bg-muted"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="lg:hidden border-t bg-card pb-4">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setOpen(false)}
+              className={`block px-6 py-2.5 text-sm font-medium transition-colors ${
+                location.pathname === l.to
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
