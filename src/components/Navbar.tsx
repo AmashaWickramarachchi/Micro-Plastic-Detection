@@ -9,9 +9,7 @@ const links = [
   { to: "/methodology", label: "Methodology" },
   { to: "/results", label: "Results" },
   { to: "/impact", label: "Impact" },
-  { to: "/documentation", label: "Documentation" },
   { to: "/team", label: "Team" },
-  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {

@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# Soil Vision Detect 🌱
 
-## Project info
+**Soil Vision Detect** is an AI-powered web app for visual soil analysis and smart field insights. Built with React, TypeScript, Vite, Tailwind, and shadcn-ui, it gives researchers and farmers an easy interface to analyze soil images.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## How can I edit this code?
+## 🧭 Features
 
-There are several ways of editing your application.
+- Upload soil image and inspect classification.
+- Interactive results and chart-based feedback.
+- Accessible layout for desktop and mobile.
+- Ready to extend with ML model integration.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Local setup (development)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ (recommended)
+- npm or bun
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Run locally
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+cd soil-vision-detect-main
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+## 📦 Build for production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+You can preview with:
 
-This project is built with:
+```bash
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+## 📁 Project structure
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- `src/main.tsx` — app entry
+- `src/App.tsx` — main layout and routing
+- `src/pages/` — page content modules
+- `src/components/` — UI + shadcn component wrappers
+- `public/` — static assets and images
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
+## 🌍 Deploy
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Add repo to GitHub.
+2. Use GitHub Pages, Netlify, or Vercel.
+3. For Vercel, integrate and set root to project folder.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## 📘 Contribution
+
+1. Fork this repo.
+2. Create branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m "Add ..."
+4. Push: `git push origin feature/your-feature`
+5. Open PR and describe your added capability.
+
+
+## 🔧 Quick Git commands
+
+```bash
+git status
+git add .
+git commit -m "Update README and app"
+git push origin main
+```
+
+
+## 👇 Quick links
+
+- Live demo: (add your deployed URL)
+- Issues: (link to GitHub issues)
+- Author: (your name)
+
+
+---
+
+> Built with love for soil research and AI-powered insights.
+

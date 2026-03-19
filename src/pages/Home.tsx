@@ -11,10 +11,11 @@ const contributions = [
 ];
 
 const team = [
-  { name: "Student Researcher 1", role: "Lead Researcher" },
-  { name: "Student Researcher 2", role: "Data Engineer" },
-  { name: "Student Researcher 3", role: "ML Engineer" },
-  { name: "Dr. Supervisor Name", role: "Project Supervisor" },
+  { name: "W.A.A.Sewwandi", role: "Lead Researcher" },
+  { name: "A.H.M.M.Silva", role: "Data Engineer" },
+  { name: "M.B.D.N.V.Gunawardhana", role: "ML Engineer" },
+  { name: "Dr. Nalaka Lankasena", role: "Project Supervisor" },
+  { name: "Prof. Lanka Undugoda", role: "Project Co-Supervisor" },
 ];
 
 const Home = () => (
@@ -23,16 +24,16 @@ const Home = () => (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroBg} alt="Microplastic research visualization" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-hero-gradient opacity-85" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
-      <div className="relative container py-24 md:py-36 text-center">
-        <p className="text-primary-foreground/80 text-sm font-medium tracking-widest uppercase mb-4">
+      <div className="relative container py-24 md:py-36 text-center text-white">
+        <p className="text-white/80 text-sm font-medium tracking-widest uppercase mb-4">
           University of Sri Jayewardenepura · Faculty of Technology
         </p>
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground max-w-4xl mx-auto leading-tight mb-6">
+        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl mx-auto leading-tight mb-6 drop-shadow-lg">
           Machine Learning-Based Microplastic Detection in Soil Matrices
         </h1>
-        <p className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-8 drop-shadow-md">
           An intelligent approach for detecting microplastics in soil environments using deep learning techniques.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
