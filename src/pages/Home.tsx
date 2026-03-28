@@ -11,11 +11,11 @@ const contributions = [
 ];
 
 const team = [
-  { name: "W.A.A.Sewwandi", role: "Lead Researcher" },
-  { name: "A.H.M.M.Silva", role: "Data Engineer" },
-  { name: "M.B.D.N.V.Gunawardhana", role: "ML Engineer" },
-  { name: "Dr. Nalaka Lankasena", role: "Project Supervisor" },
-  { name: "Prof. Lanka Undugoda", role: "Project Co-Supervisor" },
+  { name: "W.A.A.Sewwandi", role: "Lead Researcher", image: "/sewwandi.jpeg" },
+  { name: "A.H.M.M.Silva", role: "Data Engineer", image: "/silva.jpeg" },
+  { name: "M.B.D.N.V.Gunawardhana", role: "ML Engineer", image: "/gunawardhana.jpeg" },
+  { name: "Dr. Nalaka Lankasena", role: "Research Supervisor", image: "/supervisor.jpg" },
+  { name: "Prof. Lanka Undugoda", role: "Research Co-Supervisor", image: "/coSupervisor.jpg" },
 ];
 
 const Home = () => (
@@ -101,7 +101,17 @@ const Home = () => (
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {team.map((m) => (
             <div key={m.name} className="bg-card rounded-xl p-6 text-center card-shadow">
-              <div className="h-20 w-20 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
+              <img
+                src={m.image}
+                alt={m.name}
+                className="h-20 w-20 rounded-full mx-auto mb-4 object-cover"
+                onError={(e) => {
+                  // Fallback to icon if image fails to load
+                  (e.currentTarget as HTMLElement).style.display = 'none';
+                  (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                }}
+              />
+              <div className="h-20 w-20 rounded-full bg-muted mx-auto mb-4 items-center justify-center hidden">
                 <Users className="h-8 w-8 text-muted-foreground" />
               </div>
               <h4 className="font-display font-semibold text-foreground text-sm">{m.name}</h4>
